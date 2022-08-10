@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../lib/toastr/toastr.min.css">
+
+    <title>something unknown</title>
+</head>
+
+<body>
+
+    <div class="w">
+        <!-- 计算器 -->
+        <div class="calculator">
+            <div class="cal-dec flexrow">
+                <p>VERSION 2.1</p>
+                <p>©2022 OneRepublicSu DESIGN</p>
+                <p>PAGE 01</p>
+            </div>
+            <div class="out flexrow">
+                <p id="one"></p>
+                <p id="two"></p>
+
+            </div>
+            <div class="items flexrow">
+                <div data-id="zero" class="item">0</div>
+                <div data-id="one" class="item">1</div>
+                <div data-id="two" class="item">2</div>
+                <div data-id="three" class="item">3</div>
+                <div data-id="four" class="item">4</div>
+                <div data-id="five" class="item">5</div>
+                <div data-id="six" class="item">6</div>
+                <div data-id="seven" class="item">7</div>
+                <div data-id="eight" class="item">8</div>
+                <div data-id="nine" class="item">9</div>
+                <div class="btn">
+                    <div id="add">+</div>
+                    <div id="jian">-</div>
+                    <div id="cheng">*</div>
+                    <div id="chu">/</div>
+                    <div id="AC">AC</div>
+                    <div id="result">=</div>
+                </div>
+            </div>
+            <div>
+
+
+            </div>
+
+        </div>
+        <!-- 标题行 -->
+        <div class=" rowBody02">
+            <h4>CALCULATOR</h4>
+            <span>辅助实现</span>
+            <p>
+                querySelector/事件监听/split/循环/运算符/reduce
+            </p>
+            <a href="#" class="instructions01">点击此处获取使用说明</a>
+            <div class="instructions-01">
+                <img src="./img/说明书01.png" alt="">
+                <p>点击关闭</p>
+
+            </div>
+
+        </div>
+
+        <!-- 待做-->
+        <div class="todolist">
+            <form action="index.php">
+                <div class="taskbox">
+                    <input type="text" class="task" placeholder="今天也请好好加油哦">
+                    <div class="clickbtn">
+                        <i class="iconfont icon-zuorenwu submitbtn"></i>
+                        <p>
+                            submit
+                        </p>
+                    </div>
+                </div>
+                <div class="impt">
+                    <label>
+                        <input type="radio" name="imp" data-id="imp1" class="impti"> 重要且紧急
+                    </label>
+                    <label>
+                        <input type="radio" name="imp" data-id="imp2" class="impti"> 重要不紧急
+                    </label>
+                    <label>
+                        <input type="radio" name="imp" data-id="imp3" class="impti"> 不重要紧急
+                    </label>
+                    <label>
+                        <input type="radio" name="imp" data-id="imp4" class="impti"> 不重要不紧急
+                    </label>
+
+                </div>
+            </form>
+
+            <div class="todo">
+            </div>
+
+
+
+
+        </div>
+        <!-- 标题行 -->
+        <div class=" rowBody02">
+            <h4>TODOLIST</h4>
+            <span>辅助实现</span>
+            <p>
+                Date()/事件委托/map/findIndex/json字符串格式/localStorage浏览器存储
+            </p>
+            <a href="#" class="instructions02">点击此处获取使用说明</a>
+            <div class="instructions-02">
+                <img src="./img/说明书02.png" alt="">
+                <p>点击关闭</p>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <!-- 顶部导航栏 -->
+    <div class="top">
+        <ul>
+            <li data-name="calculator">计算器</li>
+            <li data-name="todolist">To Do List</li>
+        </ul>
+        <a href="#" id="closed">
+            <i class="iconfont  icon-mid-full"></i>
+            <br>
+            <p>点击此处收起导航</p>
+            <p>Click here to collapse the navigation</p>
+        </a>
+
+    </div>
+
+
+    <!-- 底部返回以及打开导航 -->
+    <div class="footer">
+        <a href="#" id="nav">
+            <div>
+                <i class="iconfont icon-fujian"></i>
+                <br>
+                <span>Click To Get Navigation</span>
+                <br>
+                <span>点击打开导航</span>
+            </div>
+        </a>
+        <a href="../index.html">
+            <i class="iconfont icon-a-zujiantianchong_huaban1fuben13"></i>
+            <br>
+            <span>Click Here To Back</span>
+            <br>
+            <span>点击此处返回</span>
+        </a>
+
+
+    </div>
+
+
+
+
+
+    <script src="../lib/jquery-v3.6.0.js"></script>
+    <script src="../lib/toastr/toastr.min.js"></script>
+    <script src="../utils/toastr.js"></script>
+
+    <script src="./js/index.js"></script>
+   
+</body>
+
+</html>

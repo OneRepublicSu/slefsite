@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>something fun</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+
+<body>
+
+    <div class="main w">
+
+        <!-- CSS厂商前缀 -->
+        <div class="article  r0">
+            <!-- 左栏图片 -->
+            <div class="aside">
+                <div class="pic-top top01"></div>
+            </div>
+            <!-- 右栏内容 -->
+            <div class="section">
+                <!-- 标题 -->
+                <h2>
+                    厂商前缀 Vendor Prefix
+                </h2>
+                <!-- 内容 -->
+                <div>
+                    <p>
+                        有时候你会发现css的内容前面有个标注，例如-moz-或者-webkit-，这部分的名字就叫做厂商前缀（vendor
+                        prefix），浏览器通过它标记实验性或者专属的属性，值，厂商前缀的常用模式就是一个英文破折号，一个标注和再次破折号，使用厂商前缀的原因是非常复杂的，我们只需要知道它的出现在解决一些问题的同时带来了大量的新问题，所以在大部分的情况下是可以避免用到它的。
+                    </p>
+
+                    <!-- 代码块格式 -->
+                    <pre class="code"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- body和HTML根元素的有趣特性 -->
+        <div class="article r1 ">
+            <!-- 右栏内容 -->
+            <div class="section">
+                <!-- 标题 -->
+                <h2>
+                    body和HTML根元素的有趣特性
+                </h2>
+                <!-- 内容 -->
+                <div>
+                    <p>
+                        属性值绝不向上传播，只有一种情况除外，应用到body元素上的背景样式会传给html元素，html是文档的根元素，用于定义渲染文档的画布，这一例外仅发生在为body元素定义了背景而没有未html元素定义背景的情况下。
+                    </p>
+
+                    <!-- 代码块格式 -->
+                    <pre class="code"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- 在旧浏览器中使用新的内容 -->
+        <div class="article r2 ">
+
+            <!-- 内容 -->
+            <div class="section">
+                <!-- 标题 -->
+                <h2>
+                    在旧浏览器中使用新元素
+                </h2>
+                <!-- 内容 -->
+                <div>
+                    <p>
+                        html在更新的过程中中加入了一些新的元素，有些浏览器在这些元素出现之前就已经存在，可能无法识别新的元素，解决办法是在dom中创建元素，让浏览器知道元素的存在，比如IE8之前不识别main元素，只需要在JavaScript中加入
+                    </p>
+
+                    <!-- 代码块格式 -->
+                    <pre class="code">
+                        document.createElement（'main'）
+                    </pre>
+                    <p>
+                        运行这段代码后，旧版的IE将认识到新元素的存在，从而选择为之赋予样式
+                    </p>
+                </div>
+            </div>
+            <!-- 图片 -->
+            <div class="aside">
+                <div class="pic-top top02"></div>
+            </div>
+        </div>
+
+        <!-- main 结束 -->
+    </div>
+
+   
+    <!-- 顶部导航栏 -->
+    <div class="top">
+        <ul>
+            <li data-name="r0">CSS厂商前缀</li>
+            <li data-name="r1">body和HTML根元素的有趣特性</li>
+            <li data-name="r2">在旧浏览器中使用新的内容</li>
+        </ul>
+        <a href="#" id="closed">
+            <i class="iconfont  icon-mid-full"></i>
+            <br>
+            <p>点击此处收起导航</p>
+            <p>Click here to collapse the navigation</p>
+        </a>
+    </div>
+
+
+    <!-- 底部返回以及打开导航 -->
+    <div class="footer">
+        <a href="#" id="nav">
+            <div>
+                <i class="iconfont icon-fujian"></i>
+                <br>
+                <span>Click To Get Navigation</span>
+                <br>
+                <span>点击打开导航</span>
+            </div>
+        </a>
+        <a href="../index.html">
+            <i class="iconfont icon-a-zujiantianchong_huaban1fuben13"></i>
+            <br>
+            <span>Click Here To Back</span>
+            <br>
+            <span>点击此处返回</span>
+        </a>
+    </div>
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

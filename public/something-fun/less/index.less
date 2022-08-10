@@ -1,0 +1,163 @@
+@import url(./base.less);
+
+// 刷新动画
+@keyframes move-t {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+// 返回按钮
+.footer {
+    height: 200px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    text-align: center;
+  
+
+    a {
+        display: block;
+        margin-bottom: 30px;
+        text-decoration: none;
+
+        i {
+            font-size: 20px;
+            color: #1e1e1e;
+        }
+
+        span {
+            color: #1e1e1e;
+            font-size: 10px;
+
+        }
+
+        &:hover span,
+        &:hover i {
+            color: #ccc;
+        }
+
+    }
+}
+
+// 顶部导航
+.top{
+    width: 100%;
+    height:200px ;
+    background-color: #cccccc;
+    position: fixed;
+   top: -200px;
+    left: 0;
+    transition: all 1S ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li{
+            padding: 20px 40px;
+            color: #727473; 
+        }
+        li.active{
+            color: #fff;
+        }
+    }
+    a{
+        text-align: center;
+        font-size: 10px;
+        color: #727473;
+        text-decoration: none;
+     
+    }
+}
+
+// 版心和居中
+.w {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+// 内容区
+.main {
+
+    //  每一大块之间间隔100px
+    >div {
+        padding: 0 100px;
+    }
+
+    // 每个大块
+    .article {
+        display: flex;
+
+        .aside {
+
+            // 左栏图片通用
+            .pic-top {
+                width: 200px;
+                height: 200px;
+                border-radius: 100px;
+                margin: 100px 50px;
+                animation: move-t 1s ease-in-out;
+            }
+
+            // 左栏图片在这里修改
+            .top01 {
+                background: url(../img/01.jpg) no-repeat center top;
+                background-size: cover;
+            }
+
+            .top02 {
+                background: url(../img/02.jpeg) no-repeat center top;
+                background-size: cover;
+            }
+        }
+
+        .section {
+            padding: 50px;
+            flex: 1;
+            animation: move-t 1s ease-in-out;
+            margin-bottom: 100px;
+
+            h2 {
+                font-weight: 400;
+                animation: move-t 0.8s ease-in-out;
+                text-align: center;
+                padding: 30px
+            }
+
+            p {
+                margin-top: 20px;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            pre {
+                margin-top: 20px;
+            }
+
+            // 大块的悬浮阴影
+            transition: all 0.8s;
+
+            &:hover {
+                box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157),
+                    0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28),
+                    0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+

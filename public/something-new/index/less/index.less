@@ -1,0 +1,129 @@
+@import url(./base.less);
+
+// 版心
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+// 顶栏
+.top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 300px;
+    width: 100%;
+    background-color: #c1bfbd;
+    transition: all 0.8s;
+    h1 {
+        text-align: center;
+        letter-spacing: 50px;
+        margin-top: 50px;
+        color: #FFF;
+    }
+    p {
+        text-align: center;
+        margin-top: 75px;
+        margin-left: -50px;
+        font-size: 12px;
+        color: #FFF;
+    }
+
+}
+
+// 内容
+.w {
+
+    // 总宽度 横栏
+    .block {
+        margin-top: 370px;
+        // 改变横栏宽度
+        width: (660px * 5);
+        height: 300px;
+        display: flex;
+
+        .all {
+            // 每个板块
+            margin-right: 120px;
+            width: 540px;
+            height: 220px;
+            display: flex;
+            // 在此处换背景
+            .pic01 {
+                background: url(../img/01.jpg) no-repeat center center;
+            }
+            .pic02 {
+                background: url(../img/02.jpg) no-repeat center center;
+            }
+            .pic03 {
+                background: url(../img/03.jpg) no-repeat center center;
+            }
+
+            .pic04 {
+                background: url(../img/04.jpeg) no-repeat center center;
+            }
+            .pic05 {
+                background: url(../img/05.jpg) no-repeat center center;
+            }
+            .pic06 {
+                background: url(../img/foot.jpg) no-repeat top center;
+            }
+            .pic07 {
+                background: url(../img/flower.jpg) no-repeat top center;
+            }
+   
+   
+            // 图片通用属性
+            .pic {
+                width: 200px;
+                height: 200px;
+                margin: 10px;
+                background-size: cover;
+                transition: all 0.8s;
+                &:hover {
+                    box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157),
+                        0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28),
+                        0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+                }
+
+            }
+
+            // 文字部分
+            .info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 10px;
+                h4 {
+                    margin: 10px 0;
+
+                }
+                p {
+                    font-size: 12px;
+                    color: #6d6b65;
+                }
+            }
+        }
+    }
+}
+
+// 返回按钮
+.back {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%);
+    text-align: center;
+    font-size: 12px;
+    a {
+        p {
+            margin: 7px 0;
+        }
+        color: #6d6b65;
+
+        &:hover {
+            color: #000;
+        }
+    }
+}

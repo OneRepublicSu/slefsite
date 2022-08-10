@@ -1,0 +1,387 @@
+@charset 'UTF-8';
+body,
+ul,
+p,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.clearfix::after {
+  content: '';
+  /* 因为伪元素插入的标签属于行内元素,需要转换为块级 */
+  display: block;
+  clear: both;
+  /* 兼容性的作用 */
+  height: 0;
+  visibility: hidden;
+}
+/* 兼容ie6 ie7 */
+/*ie浏览器 */
+.clearfix {
+  *zoom: 1;
+}
+@keyframes move-t {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.flexrow {
+  display: flex;
+  justify-content: space-between;
+}
+.calculator {
+  animation: move-t 0.3s;
+  background-color: #faf4f0;
+  width: 800px;
+  margin: 100px auto;
+  transition: all 0.8s;
+}
+.calculator:hover {
+  box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157), 0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28), 0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+.calculator .cal-dec {
+  font-size: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #948f87;
+  padding: 30px;
+}
+.calculator .out {
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.calculator .items {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #f3e7df;
+  padding: 30px;
+}
+.calculator .items .item {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  width: 180px;
+  margin: 0 5px;
+  height: 40px;
+  border-bottom: 1px solid #948f87;
+  font-size: 30px;
+  color: #948f87;
+  padding: 20px 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.calculator .items .item::after {
+  content: attr(data-id);
+  font-size: 6px;
+  position: absolute;
+  right: 0;
+}
+.calculator .items .btn {
+  margin-left: 20px;
+  font-weight: 700;
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  color: #948f87;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.todolist {
+  animation: move-t 0.3s;
+  width: 800px;
+  margin: 100px auto;
+}
+.todolist .taskbox {
+  display: flex;
+  background-color: #727473;
+  width: 500px;
+  height: 50px;
+  margin: 0 auto;
+  cursor: text;
+}
+.todolist .taskbox .task {
+  border: none;
+  background-color: #ccc;
+  padding: 0 20px;
+  display: block;
+  width: 430px;
+}
+.todolist .taskbox .task:focus {
+  outline: none;
+  color: #fff;
+}
+.todolist .taskbox .clickbtn {
+  width: 70px;
+  height: 50px;
+  text-align: center;
+}
+.todolist .taskbox .clickbtn .submitbtn {
+  line-height: 30px;
+  font-style: 16px;
+  color: #f3e7df;
+}
+.todolist .taskbox .clickbtn p {
+  color: #f3e7df;
+  font-style: 10px;
+}
+.todolist .impt {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #1e1e1e;
+}
+.todolist .impt .impti[type=radio] {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+.todolist .impt .impti[type=radio]::before {
+  position: absolute;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  visibility: visible;
+  text-align: center;
+  content: '';
+}
+.todolist .impt .impti[type=radio]:checked::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ebccd4;
+}
+.todolist .todo .todochild {
+  width: 500px;
+  margin: 20px auto;
+}
+.todolist .todo .red p {
+  display: flex;
+  justify-content: space-between;
+  background-color: #965455;
+  font-size: 10px;
+  color: #fdf3f0;
+  line-height: 30px;
+  padding: 0 20px;
+}
+.todolist .todo .red p a {
+  color: #fdf3f0;
+}
+.todolist .todo .red p a i {
+  padding: 0 5px ;
+}
+.todolist .todo .red p a::after {
+  content: '未完成';
+}
+.todolist .todo .red div {
+  background-color: #f3eae8;
+  color: #727473;
+  padding: 20px;
+}
+.todolist .todo .green p {
+  display: flex;
+  justify-content: space-between;
+  background-color: #95a48d;
+  font-size: 10px;
+  color: #fdf3f0;
+  line-height: 30px;
+  padding: 0 20px;
+}
+.todolist .todo .green p a {
+  color: #fdf3f0;
+}
+.todolist .todo .green p a i {
+  padding: 0 5px ;
+}
+.todolist .todo .green p a::after {
+  content: '未完成';
+}
+.todolist .todo .green div {
+  background-color: #e0e5df;
+  color: #727473;
+  padding: 20px;
+}
+.todolist .todo .orange p {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e0c8b0;
+  font-size: 10px;
+  color: #fdf3f0;
+  line-height: 30px;
+  padding: 0 20px;
+}
+.todolist .todo .orange p a {
+  color: #fdf3f0;
+}
+.todolist .todo .orange p a i {
+  padding: 0 5px ;
+}
+.todolist .todo .orange p a::after {
+  content: '未完成';
+}
+.todolist .todo .orange div {
+  background-color: #fef8e6;
+  color: #727473;
+  padding: 20px;
+}
+.todolist .todo .blue p {
+  display: flex;
+  justify-content: space-between;
+  background-color: #b9c8e7;
+  font-size: 10px;
+  color: #fdf3f0;
+  line-height: 30px;
+  padding: 0 20px;
+}
+.todolist .todo .blue p a {
+  color: #fdf3f0;
+}
+.todolist .todo .blue p a i {
+  padding: 0 5px ;
+}
+.todolist .todo .blue p a::after {
+  content: '未完成';
+}
+.todolist .todo .blue div {
+  background-color: #dfe2ec;
+  color: #727473;
+  padding: 20px;
+}
+.todolist .todo .active p {
+  background-color: #727473;
+}
+.todolist .todo .active p a::after {
+  content: '完成';
+}
+.todolist .todo .active div {
+  background-color: #cccccc;
+  text-decoration: line-through;
+}
+.rowBody02 {
+  animation: move-t 0.5s;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  border-radius: 4px;
+  text-align: center;
+  color: #727473;
+  transition: all 1s;
+}
+.rowBody02 span {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-style: 8px;
+}
+.rowBody02 a {
+  color: #727473;
+  display: block;
+  margin-top: 20px;
+}
+.rowBody02 h4 {
+  font-size: 20px;
+}
+.rowBody02 .instructions-01,
+.rowBody02 .instructions-02 {
+  display: none;
+  border: 1px solid #727473;
+  padding: 20px;
+  margin: 20px auto;
+  width: 800px;
+  transition: all 1s;
+}
+.rowBody02 .instructions-01 img,
+.rowBody02 .instructions-02 img {
+  width: 700px;
+  margin: 0 auto;
+}
+.footer {
+  height: 200px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  text-align: center;
+}
+.footer a {
+  display: block;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.footer a i {
+  font-size: 20px;
+  color: #1e1e1e;
+}
+.footer a span {
+  color: #1e1e1e;
+  font-size: 10px;
+}
+.footer a:hover span,
+.footer a:hover i {
+  color: #ccc;
+}
+.top {
+  width: 100%;
+  height: 200px;
+  background-color: #cccccc;
+  position: fixed;
+  top: -200px;
+  left: 0;
+  transition: all 1S;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
+}
+.top ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.top ul li {
+  white-space: nowrap;
+  padding: 5px 40px;
+  color: #727473;
+}
+.top ul li.active {
+  color: #fff;
+}
+.top a {
+  text-align: center;
+  font-size: 10px;
+  color: #727473;
+  text-decoration: none;
+}

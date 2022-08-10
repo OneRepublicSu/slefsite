@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>something different</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+
+<body>
+    <div class="main w">
+
+        <!-- pic 二分 -->
+        <div class="aside">
+            <div class="pic-top top01"></div>
+        </div>
+
+        <!-- 内容二分 -->
+        <div class="section">
+            <!-- 标题 -->
+            <h2>
+                排序算法之——快速排序 Quick Sort
+            </h2>
+            <!-- 内容 -->
+            <div>
+                <p>
+                    快速排序是处理大数据集最快的排序方法之一，它是一种分而治之的算法，体现了二分法的思想，通过递归的方法讲数据依次分解为包含较小元素和较大元素的不同子序列，该算法不停的重复这个步骤直到整个算法都是有序的。
+                </p>
+                <p>
+                    在使用这个方法之前我们需要达成一个共识,<span>在一个一维的队伍里,只要能确定你的前面有几个人,你的后面有几个人,就可以确定你所在的位置。</span>
+                </p>
+                <p>
+                    这个算法要求我们首先要在列表中选择一个元素作为基准值pivot,数据的排序是围绕着基准值进行的,将列表中小于基准值的元素移到数组的底部，将大于基准值的元素移到数组的顶部。在进行排序之前先检测数组的长度就可以确定此函数在什么时候结束，并且将结果返回，特别声明，快速排序法非常适合用于处理大型数据集合，在处理小数据集时性能反而会下降。
+                </p>
+                <p>
+                    以下是基础快速排序的JavaScript代码实现：
+                </p>
+                <!-- 涉及到代码请写在这里 -->
+                <pre class="code">
+         function qSort（list）{ 
+                 if(list.length === 0){
+                     return []
+                 }
+             let lesser = [] 
+             let greater = [] 
+             let pivot = list[0] 
+             for ( let i = 0 ; i < list.length ; i++){
+                 if(list[i] < pivot ){
+                     lesser.push(list[i])
+                 } else{
+                     greater.push(list[i])
+                 }
+             } 
+             return qSort（lesser）.concat(pivot,qSort（greater）)
+           }
+                    
+                </pre>
+            </div>
+            <!-- section -->
+        </div>
+
+    </div>
+
+    <!-- 返回按钮 -->
+    <div class="footer">
+        <a href="../index.html">
+            <i class="iconfont icon-a-zujiantianchong_huaban1fuben13"></i>
+            <br>
+            <span>Click Here To Back</span>
+            <br>
+            <span>点击此处返回</span>
+        </a>
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

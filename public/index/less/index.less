@@ -1,0 +1,224 @@
+@import url(./base.less);
+@import url(./normalize.less);
+
+// 移动动画
+@keyframes move-t {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+// 版心
+.w {
+    width: 1200px;
+    margin: 100px auto;
+}
+
+
+// main板块
+.main {
+
+    .time {
+        height: 300px;
+        animation: move-t 1.6s ease-in-out;
+
+        #Time {
+            margin-top: 200px;
+            text-align: center;
+            font-size: 50px;
+            color: #303030;
+        }
+
+        #saying {
+            margin-top: 80px;
+        }
+
+        p {
+            font-size: 12px;
+            margin-top: 20px;
+            text-align: center;
+            color: #727473;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    // 技术文档
+    .tec {
+        text-align: center;
+        animation: move-t 1.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-bottom: 80px;
+
+        h2,
+        span {
+            font-weight: 400;
+        }
+
+        .tec-doc {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            animation: move-t 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            >div {
+                // 大块的尺寸
+                width: 280px;
+                height: 280px;
+
+                // 图片部分
+                .pic {
+                    height: 180px;
+                    border: 1px solid #ccc;
+
+                    .picz {
+                        width: 260px;
+                        height: 160px;
+                        margin: 10px;
+                    }
+
+                    // 单张图片在这里修改
+
+                    .picture01 {
+                        background: url(../img/css.png) no-repeat center center;
+                        background-size: cover;
+                    }
+
+                    .picture02 {
+                        background: url(../img/算法相关.jpg) no-repeat center center;
+                        background-size: cover;
+                    }
+
+                    .picture03 {
+                        background: url(../img/实例.jpg) no-repeat center center;
+                        background-size: cover;
+                    }
+
+                    .picture04 {
+                        background: url(../img/基础知识.png) no-repeat center center;
+                        background-size: cover;
+                    }
+
+                    .picture05 {
+                        background: url(../img/游戏.png) no-repeat center center;
+                        background-size: cover;
+                    }
+
+                    // 悬浮效果
+                    transition: all 0.8s;
+
+                    &:hover {
+                        box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157),
+                            0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28),
+                            0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+
+                    }
+
+                }
+
+                // 文字部分
+                .bottom {
+                    height: 100px;
+
+                    h4 {
+                        font-weight: 400;
+                        font-size: 14px;
+                        margin-top: 30px;
+                        color: #303030;
+                    }
+
+                    span {
+                        display: block;
+                        margin-top: 20px;
+                        font-size: 12px;
+                        color: #303030;
+                    }
+                }
+            }
+        }
+    }
+
+    // 生活日志
+    .life {
+        text-align: center;
+        animation: move-t 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        // 标题
+        h2,
+        span {
+            font-weight: 400;
+        }
+
+        // 总
+        .life-main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            animation: move-t 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            >div {
+                // 每个大块
+                width: 280px;
+                height: 280px;
+
+                // 图片部分
+                .pic {
+                    height: 180px;
+                    border: 1px solid #ccc;
+
+                    .picz {
+                        width: 260px;
+                        height: 160px;
+                        margin: 10px;
+                    }
+
+                    .picture01 {
+                        background: url(../img/路边野餐.png) no-repeat center center;
+                        background-size: cover;
+                        margin: 10px;
+                    }
+
+                    .picture02 {
+                        background: url(../img/留声机.png) no-repeat center center;
+                        background-size: cover;
+                        margin: 10px;
+                    }
+
+                    // 悬浮效果
+                    transition: all 0.8s;
+
+                    &:hover {
+                        box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157),
+                            0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28),
+                            0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+
+                    }
+
+                }
+
+                // 文字部分
+                .bottom {
+                    height: 100px;
+
+                    h4 {
+                        font-weight: 400;
+                        font-size: 14px;
+                        margin-top: 30px;
+                        color: #303030;
+                    }
+
+                    span {
+                        display: block;
+                        margin-top: 20px;
+                        font-size: 12px;
+                        color: #303030;
+                    }
+                }
+            }
+        }
+    }
+}
