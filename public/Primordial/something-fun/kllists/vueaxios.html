@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/markdown.css">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+</head>
+
+<body class='typora-export os-windows'>
+    <div id='write' class='is-node'>
+        <h3><a name='header-n60' class='md-header-anchor '></a>知识脉络</h3>
+        <hr />
+        <p><img src='./uploads/vue-axios.png' alt='vue-axios' referrerPolicy='no-referrer' /></p>
+        <p>&nbsp;</p>
+        <h3><a name='header-n148' class='md-header-anchor '></a>vue-axios</h3>
+        <hr />
+        <h4><a name='header-n63' class='md-header-anchor '></a>axios特点回顾</h4>
+        <ol start=''>
+            <li>支持客户端发送Ajax请求</li>
+            <li>支持服务端Node.js发送请求</li>
+            <li>支持Promise相关用法（底层就是promise，返回一个promise对象）</li>
+            <li>支持请求和响应的拦截器功能</li>
+            <li>自动转换JSON数据</li>
+            <li>axios 底层还是原生js实现, 内部通过Promise封装的</li>
+        </ol>
+        <blockquote>
+            <p>axios在使用之前一定要进行导入操作</p>
+        </blockquote>
+        <p>通用版本：</p>
+        <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="javascript"
+            style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">axios</span>({</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">method</span>: <span class="cm-string">'请求方式'</span>, <span class="cm-comment">// get post</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">url</span>: <span class="cm-string">'请求地址'</span>,</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">data</span>: { &nbsp; &nbsp;<span class="cm-comment">// 拼接到请求体的参数,  post请求的参数</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">xxx</span>: <span class="cm-variable">xxx</span>,</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  },</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">params</span>: { &nbsp;<span class="cm-comment">// 拼接到请求行的参数, get请求的参数</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; <span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-property">xxx</span>: <span class="cm-variable">xxx</span> </span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}).<span class="cm-property">then</span>(<span class="cm-def">res</span> <span class="cm-operator">=&gt;</span> {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">res</span>.<span class="cm-property">data</span>) <span class="cm-comment">// 后台返回的结果</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}).<span class="cm-property">catch</span>(<span class="cm-def">err</span> <span class="cm-operator">=&gt;</span> {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">err</span>) <span class="cm-comment">// 后台报错返回</span></span></pre>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;">})</span></pre>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 322px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 322px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p>简化版本：</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="javascript"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-variable">axios</span>.<span class="cm-property">get</span>(<span class="cm-string">'/api/getcomment'</span>).<span class="cm-property">then</span>(({<span class="cm-property">data</span>:<span class="cm-def">res</span>}) <span class="cm-operator">=&gt;</span> <span class="cm-variable">alert</span>(<span class="cm-variable-2">res</span>.<span class="cm-property">message</span>)}</span></pre>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p>进阶版本：</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="javascript"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-keyword">async</span> <span class="cm-variable">addBooks</span>() {</span></pre>
+        </div>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-keyword">let</span> { <span class="cm-property">data</span>:<span class="cm-def">res</span> } <span class="cm-operator">=</span> <span class="cm-keyword">await</span> <span class="cm-variable">axios</span>.<span class="cm-property">post</span>(<span class="cm-string">"/api/addbook"</span>,<span class="cm-keyword">this</span>.<span class="cm-property">book</span>)</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">res</span>)</span></pre>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  },</span></pre>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
+    </div>
+    </div>
+    </pre>
+    <h4><a name='header-n84' class='md-header-anchor '></a>axios的导入</h4>
+    <ol>
+        <li>
+            <p>方式一：即用即导，导入的页面才能使用axios</p>
+        </li>
+        <li>
+            <p>方式二：全局导入，首先需要再main.js中导入axios的包，将axios挂载在vue实例对象的原型身上</p>
+            <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+                lang="javascript"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
+                        style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Vue</span>.<span class="cm-property">prototype</span>.<span class="cm-property">$axios</span> <span class="cm-operator">=</span> <span class="cm-variable">axios</span></span></pre>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;">
+            </div>
+            <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p>此方法的底层原理是<strong>原型链</strong></p>
+            <p>原理： 每一个组件都是<strong>vue实例对象</strong>，只要把数据挂载到vue的原型中，那么任何组件都可以通过原型链访问到你挂载的数据。</p>
+            <p><strong>Q</strong>：那么为什么要叫<code>$axios</code>呢？</p>
+            <p><strong>A</strong>：其实叫什么都可以，因为vue实例中的很多属性属性都是以<code>$</code>开头，为了代码风格一致，一般叫做<code>$axios</code>.
+                随着学习深入，你会发现vue中很多属性都是<code>$</code>开头</p>
+        </li>
+    </ol>
+    <h4><a name='header-n111' class='md-header-anchor '></a>props验证功能</h4>
+    <p>属性是一组可传入组件的值。 你通常会向组件添加属性，以传入它应显示或更改其行为的值。</p>
+    <p>可通过在 <code>script</code> 元素内添加 <code>props</code> 字段来定义组件的属性。 可以列出组件属性的名称，方式是将它们以数组形式列出：</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- UserDisplay component --&gt;</span></span></pre>
+    </div>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">default</span> {</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">name</span>: <span class="cm-string">'UserDisplay'</span>,</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">props</span>: [<span class="cm-string">'name'</span>, <span class="cm-string">'age'</span>]</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+    <div class="" style="position: relative;">
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 161px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 161px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p>调用方可通过将值作为数组的一部分列出的方式来传入任何类型的值。 这适用于基本应用程序，但你通常需要指出希望为每个属性使用的数据类型。</p>
+    <p>定义架构可提供有关属性的更可靠的信息。 如果希望指出 <code>name</code> 为字符串，<code>age</code> 为数字，可以像下面这样定义属性架构：</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="javascript"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;!--</span> <span class="cm-variable">UserDisplay</span> <span class="cm-variable">component</span> <span class="cm-variable">script</span> <span class="cm-operator">--&gt;</span></span></pre>
+    </div>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;</span><span class="cm-variable">script</span><span class="cm-operator">&gt;</span></span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">default</span> {</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">name</span>: <span class="cm-string">'UserDisplay'</span>,</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">props</span>: {</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">name</span>: <span class="cm-variable">String</span>,</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">age</span>: <span class="cm-variable">Number</span></span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+    <div class="" style="position: relative;">
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">&lt;</span><span class="cm-string-2">/script&gt;</span></span></pre>
+    </div>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 253px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 253px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p>&nbsp;</p>
+    </div>
+</body>
+
+</html>

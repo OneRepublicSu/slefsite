@@ -1,0 +1,309 @@
+@import url(./base.less);
+
+// 动画
+@keyframes move-t {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes move-m {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+body {
+    background: #ccc;
+}
+
+// 顶部标题
+.main-top {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 250px;
+    background-color: #ccc;
+    text-align: center;
+
+    h3 {
+        font-size: 130px;
+        font-style: italic;
+    }
+
+    .line1 {
+        margin-top: 20px;
+    }
+
+}
+
+// 版心
+.w {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+
+// 主要内容
+.main {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contentadd {
+        animation: move-m 1s;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 300px;
+        background-color: #eee;
+        padding: 10px;
+
+        // 头像
+        form {
+            display: flex;
+
+            .btna {
+                background-color: transparent;
+            }
+
+            .ftop {
+                width: 250px;
+
+                // background: url(../img/01.jpg) center/contain;
+
+                .picavatar {
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 50%;
+                    background-color: #eee;
+                    margin: 10px auto;
+                   
+
+                }
+
+
+
+                .btn-primary {
+                    .iconm {
+                        margin-right: 10px;
+                    }
+
+                    display: block;
+                    width: 250px;
+                    height: 20px;
+                    outline: none;
+                    border: none;
+                    margin: 10px auto;
+                    font-size: 10px;
+
+                }
+
+                .nameadd {
+                    margin-left: 50px;
+                    margin-top: 20px;
+                    font-size: 10px;
+                }
+
+                .form-control {
+                    display: block;
+                    text-align: center;
+                    width: 150px;
+                    height: 30px;
+                    font-size: 20px;
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 1px #1e1e1e;
+                    margin: 10px auto;
+                    background-color: transparent;
+
+                    &::placeholder {
+                        text-align: center;
+                    }
+
+                    &:focus {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            .fbottom {
+                .fbc {
+                    font-size: 10px;
+                    margin: 10px 0;
+                }
+
+                .fcbtn {
+                    display: flex;
+                    justify-content: end;
+                }
+
+                .btn-dark {
+                    .iconu {
+                        margin-right: 10px;
+                        font-size: 12px;
+                    }
+
+                    display: block;
+                    height: 20px;
+                    outline: none;
+                    border: none;
+                    margin-top: 10px;
+                    font-size: 10px;
+                }
+
+                .conmmenta {
+
+                    width: 520px;
+                    height: 205px;
+                    resize: none;
+                    overflow: scroll;
+                    border: none;
+                    outline: none;
+
+                }
+
+                ::-webkit-scrollbar {
+                    width: 1px;
+                    height: 1px;
+                    background-color: #eee;
+                }
+
+                /*定义滚动条轨道 内阴影+圆角*/
+                //   ::-webkit-scrollbar-track {
+                //     box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+                //     border-radius: 10px;
+                //     background-color: rgba(240, 240, 240, .5);
+                //   }
+
+                /*定义滑块 内阴影+圆角*/
+                ::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+                    background-color: #eee;
+                }
+            }
+
+        }
+
+
+    }
+
+    .content-main {
+        >div {
+            margin-top: 100px;
+            margin-bottom: 250px;
+            position: relative;
+            width: 600px;
+            background-color: white;
+            transition: all 0.8s;
+            display: flex;
+            flex-direction: column;
+
+            // 头像
+            .pic {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+
+            // 个人信息
+            .info {
+                padding-top: 80px;
+                width: 600px;
+                height: 40px;
+                text-align: center;
+
+                h4 {
+                    font-size: 20px;
+                    font-style: italic;
+                    margin: 5px 0;
+                    color: #1e1e1e;
+
+                }
+
+            }
+
+            .content {
+                text-align: center;
+
+                padding: 30px;
+
+                .time {
+                    margin: 20px 0;
+                    font-size: 12px;
+                }
+
+
+            }
+
+            &:hover {
+                box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157),
+                    0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28),
+                    0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+// 返回按钮
+
+.footer {
+    height: 200px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    text-align: center;
+
+    a {
+        display: block;
+        margin-bottom: 30px;
+        text-decoration: none;
+
+        i {
+            font-size: 20px;
+            color: #1e1e1e;
+        }
+
+        span {
+            color: #1e1e1e;
+            font-size: 10px;
+
+        }
+
+        &:hover span,
+        &:hover i {
+            color: #eee;
+        }
+
+    }
+}

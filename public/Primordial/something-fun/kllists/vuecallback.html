@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/markdown.css">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+</head>
+
+<body>
+
+    <body class='typora-export os-windows'>
+        <div id='write' class='is-node'>
+            <h3><a name='header-n247' class='md-header-anchor '></a>知识脉络</h3>
+            <hr />
+            <p><img src='./uploads/vue生命周期钩子.png' alt='vue生命周期钩子' referrerPolicy='no-referrer' /></p>
+            <h3><a name='header-n449' class='md-header-anchor '></a>vue生命周期钩子</h3>
+            <hr />
+            <h4><a name='header-n152' class='md-header-anchor '></a>基础概念</h4>
+            <blockquote>
+                <p>生命周期就是一个<strong>组件</strong>从<strong>创建到销毁</strong>的整个过程</p>
+            </blockquote>
+            <blockquote>
+                <p>vue的生命周期钩子：vue从创建到销毁的过程中，会执行的一些回调函数</p>
+            </blockquote>
+            <p>钩子实际上就是一种<code>回调函数</code>。</p>
+            <p>生命周期的“出生期”如果进行细分可以分为以下阶段</p>
+            <ol start=''>
+                <li>创建vue实例</li>
+                <li>创建data数据</li>
+                <li>创建el挂载点</li>
+                <li>将data数据渲染到el挂载点</li>
+            </ol>
+            <p>销毁期：解除data与el的关联，也就是说修改了data，页面不会再被渲染了</p>
+            <p><strong>Special
+                    Tips</strong>：每一个生命周期钩子中的<code>this</code>都是指向<code>vue实例</code>，所以生命周期钩子<code>不能</code>是<code>箭头函数</code>
+            </p>
+            <h3><a name='header-n170' class='md-header-anchor '></a>四个阶段八个方法</h3>
+            <hr />
+            <p>四个阶段分别为：初始化 <code>created</code> 挂载 <code>mount</code> 更新 <code>updated</code> 销毁 <code>destory</code>
+            </p>
+            <p>八个方法如下表：</p>
+            <figure>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>执行顺序</th>
+                            <th>钩子函数</th>
+                            <th>执行时机</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><code>beforeCreate(){}</code></td>
+                            <td>vue实例创建了，但是el和data还没有创建(初始化vue实例)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><code>created() {}</code></td>
+                            <td>data数据创建了，但是el挂载点还没有创建(初始化data中的数据和methods中的方法)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><code>beforeMount() {}</code></td>
+                            <td>el挂载点创建了，但是data数据还没有渲染(底层：创建el挂载点，并且生成虚拟DOM)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><code>mounted() {}</code></td>
+                            <td>data数据 第一次 渲染完毕(将虚拟dom渲染成真实DOM)</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><code>beforeUpdate() {}</code></td>
+                            <td>检测到data数据变化，但是还没有开始重新渲染(这是一个会多次执行的钩子)</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><code>updated() {}</code></td>
+                            <td>变化后的data数据 ，完成渲染到页面(这是一个会多次执行的钩子)</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><code>beforeDestroy() {}</code></td>
+                            <td>vue实例销毁即将销毁，解除data与el的关联，之后修改data，页面不会被渲染(解除 事件绑定、侦听器、组件)</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><code>destroyed() {}</code></td>
+                            <td>vue实例已经销毁</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+            <h4><a name='header-n211' class='md-header-anchor '></a>初始化阶段</h4>
+            <p>这个阶段发生的动作有：</p>
+            <ol>
+                <li>1.new Vue() – <strong>Vue实例化</strong>(组件也是一个小的Vue实例)</li>
+                <li>Init Events &amp; Lifecycle – <strong>初始化</strong>事件和生命周期函数</li>
+                <li>beforeCreate – 生命周期钩子函数被执行</li>
+                <li>Init injections&amp;reactivity – Vue内部添加data和methods等</li>
+                <li>created – 生命周期钩子函数被执行, <strong>实例创建</strong></li>
+                <li>接下来是编译模板阶段 –开始分析</li>
+                <li><strong>检查挂载点el</strong>，如果没有就调用$mount()方法，如果有则继续检查template选项</li>
+            </ol>
+            <p><strong>beforeCreate钩子</strong></p>
+            <p>这个钩子初始化vue实例，但是data中的数据并没有被创建</p>
+            <p><strong>created</strong></p>
+            <p>初始化data中数据，但是并没有挂载到页面</p>
+            <p><strong>经典应用</strong> ： 页面一加载, ajax请求数据渲染页面的过程一般写在这个钩子里面。（即页面一加载就发送ajax）</p>
+            <h4><a name='header-n308' class='md-header-anchor '></a>挂载阶段</h4>
+            <p>这个阶段发生的动作有：</p>
+            <ol>
+                <li>
+                    <p>1.template选项检查</p>
+                    <p>有 - 当前vue环境是脚手架， webpack就会编译.vue文件 </p>
+                    <p>没有- 当前vue环境是html环境</p>
+                </li>
+                <li>
+                    <p>虚拟DOM挂载成真实DOM之前</p>
+                </li>
+                <li>
+                    <p>beforeMount – 生命周期钩子函数被执行</p>
+                </li>
+                <li>
+                    <p>把虚拟DOM和渲染的数据一并挂到真实DOM上</p>
+                </li>
+                <li>
+                    <p>真实DOM挂载完毕</p>
+                </li>
+                <li>
+                    <p>mounted – 生命周期钩子函数被执行</p>
+                </li>
+            </ol>
+            <p><strong>beforeMount</strong></p>
+            <p>根据你的vue代码环境(html环境与脚手架环境),来编译模板html结构，完成el挂载点加载（生成虚拟DOM），但是并没有挂载数据</p>
+            <p><strong>mounted</strong> </p>
+            <p>虚拟DOM和渲染的数据一并挂到真实DOM上，简单来说就是把data中的数据渲染到挂载点上，这个钩子是最早可以获取页面DOM元素的钩子</p>
+            <p>经典应用：初始渲染，默认的第一个按钮，聚焦等都会在这个钩子中完成</p>
+            <p>&nbsp;</p>
+            <blockquote>
+                <p>vue在第一次渲染的时候只会执行创建和挂载阶段的四个钩子</p>
+            </blockquote>
+            <p>&nbsp;</p>
+            <h4><a name='header-n363' class='md-header-anchor '></a>更新阶段</h4>
+            <p>这个阶段发生的动作有：</p>
+            <ol>
+                <li>当data里数据改变, 更新DOM之前</li>
+                <li>beforeUpdate – 生命周期钩子函数被执行</li>
+                <li>虚拟DOM重新渲染, 打补丁到真实DOM</li>
+                <li>生命周期钩子函数被执行</li>
+                <li>当有data数据改变 – 重复这个循环</li>
+            </ol>
+            <p><strong>beforeUpdate</strong> </p>
+            <p>检测data数据变化， 修改虚拟DOM，但是并没有完成渲染</p>
+            <p><strong>updated</strong></p>
+            <p>完成data渲染（将虚拟DOM渲染成真实DOM）</p>
+            <blockquote>
+                <p>update是可以被多次执行的钩子，但是我们在开发中并不常用，因为这个钩子存在极大的性能问题，任何一个数据的变化都会执行它，出于性能的考虑我们更多的会使用侦听器或者计算属性。</p>
+            </blockquote>
+            <h4><a name='header-n394' class='md-header-anchor '></a>销毁阶段</h4>
+            <p>这个阶段发生的动作有：</p>
+            <ol>
+                <li>当$destroy()被调用 – 比如组件DOM被移除(例v-if)</li>
+                <li>beforeDestroy – 生命周期钩子函数被执行</li>
+                <li>拆卸数据监视器、子组件和事件侦听器</li>
+                <li>实例销毁后, 最后触发一个钩子函数</li>
+                <li>destroyed – 生命周期钩子函数被执行</li>
+            </ol>
+            <p>销毁阶段的触发条件</p>
+            <ol>
+                <li>当<code>$destroy()</code>被调用</li>
+                <li>组件DOM被移除，比如<code>v-if</code>的值为<code>false</code></li>
+            </ol>
+            <p><strong>beforeDestroy</strong></p>
+            <p>这个钩子准备移除你的组件，移除数据监视器，侦听器等</p>
+            <p><strong>destroyed</strong></p>
+            <p>销毁结束，在此之后，data无论做任何更改都不会被加载到页面上去</p>
+            <blockquote>
+                <p>销毁后控制台会出现红色的提示，但这并非报错哦</p>
+            </blockquote>
+            <h3><a name='header-n250' class='md-header-anchor '></a>自定义创建脚手架</h3>
+            <hr />
+            <h4><a name='header-n214' class='md-header-anchor '></a><strong>manually 手动配置</strong></h4>
+            <p>babel：完成JS从高版本转向低版本的转换，使代码有更好的兼容性</p>
+            <p>TS：JS的延伸，广泛的应用于vue3的项目（不支持vue2）</p>
+            <p>Web App：小程序（已经淘汰）</p>
+            <p>Router：项目</p>
+            <p>Vuex：项目</p>
+            <p>css-processors：预处理，使框架可以处理less</p>
+            <p>Lint/Formatter：提示严重error</p>
+            <p>Testing：测试</p>
+            <h4><a name='header-n273' class='md-header-anchor '></a>其它选项</h4>
+            <p>ES Lint ：绝大多数的情况下我们都默认选择<code>standard</code>标准模式</p>
+            <p>Lint on save 保存即检查 on commit 提交检查</p>
+            <p>In dedicated 加文件存储配置 In json 在已有的package中存配置</p>
+            <p> </p>
+        </div>
+    </body>
+</body>
+
+</html>

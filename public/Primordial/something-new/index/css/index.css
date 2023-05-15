@@ -1,0 +1,132 @@
+@charset 'UTF-8';
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.top {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 300px;
+  width: 100%;
+  background-color: #c1bfbd;
+  transition: all 0.8s;
+}
+.top h1 {
+  text-align: center;
+  letter-spacing: 50px;
+  margin-top: 50px;
+  color: #FFF;
+}
+.top p {
+  text-align: center;
+  margin-top: 75px;
+  margin-left: -50px;
+  font-size: 12px;
+  color: #FFF;
+}
+.w .block {
+  margin-top: 370px;
+  width: 3300px;
+  height: 300px;
+  display: flex;
+}
+.w .block .all {
+  margin-right: 120px;
+  width: 540px;
+  height: 220px;
+  display: flex;
+}
+.w .block .all .pic01 {
+  background: url(../img/01.jpg) no-repeat center center;
+}
+.w .block .all .pic02 {
+  background: url(../img/02.jpg) no-repeat center center;
+}
+.w .block .all .pic03 {
+  background: url(../img/03.jpg) no-repeat center center;
+}
+.w .block .all .pic04 {
+  background: url(../img/04.jpeg) no-repeat center center;
+}
+.w .block .all .pic05 {
+  background: url(../img/05.jpg) no-repeat center center;
+}
+.w .block .all .pic06 {
+  background: url(../img/foot.jpg) no-repeat top center;
+}
+.w .block .all .pic07 {
+  background: url(../img/flower.jpg) no-repeat top center;
+}
+.w .block .all .pic {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-size: cover;
+  transition: all 0.8s;
+}
+.w .block .all .pic:hover {
+  box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157), 0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28), 0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+.w .block .all .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 10px;
+}
+.w .block .all .info h4 {
+  margin: 10px 0;
+}
+.w .block .all .info p {
+  font-size: 12px;
+  color: #6d6b65;
+}
+.back {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%);
+  text-align: center;
+  font-size: 12px;
+}
+.back a {
+  color: #6d6b65;
+}
+.back a p {
+  margin: 7px 0;
+}
+.back a:hover {
+  color: #000;
+}

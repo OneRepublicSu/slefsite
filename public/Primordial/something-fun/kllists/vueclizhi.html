@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/markdown.css">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+</head>
+
+<body class='typora-export os-windows'>
+    <div id='write' class='is-node'>
+        <h3><a name='header-n0' class='md-header-anchor '></a>知识脉络</h3>
+        <p><img src='./uploads/vue-cli组件传值.png' alt='vue-cli组件传值' referrerPolicy='no-referrer' /></p>
+        <p>&nbsp;</p>
+        <h3><a name='header-n4' class='md-header-anchor '></a>组件属性</h3>
+        <hr />
+        <p>HTML 元素是用于创建页面的构建基块。 可通过将特性设置为不同的值来配置这些元素的行为。 正如我们前面强调的那样，创建组件与创建自定义 HTML 标记相似。 因此，你可以通过属性传入信息，从而提高组件的可重用性。
+        </p>
+        <h3><a name='header-n7' class='md-header-anchor '></a>定义和读取属性</h3>
+        <hr />
+        <h4><a name='header-n9' class='md-header-anchor '></a>定义声明</h4>
+        <p>属性是一组可传入组件的值。 你通常会向组件添加属性，以传入它应显示或更改其行为的值。</p>
+        <p>可通过在子元素的 <code>script</code> 元素内添加 <code>props</code> 字段来定义组件的属性。 可以列出组件属性的名称，方式是将它们以<strong>数组</strong>形式列出。
+        </p>
+        <p>props中的数据会像data中的一样被平铺到vue实例中。因为这个相似的属性，所以我们在设置的时候需要注意不要在data和props中设置一样的数据，会发生冲突报错。</p>
+        <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+            lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- UserDisplay component --&gt;</span></span></pre>
+    </div>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">default</span> {</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">name</span>: <span class="cm-string">'UserDisplay'</span>,</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">props</span>: [<span class="cm-string">'name'</span>, <span class="cm-string">'age'</span>]</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+    <pre class=" CodeMirror-line "
+        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 161px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 161px;"></div>
+    </div>
+    </div>
+    </pre>
+    <blockquote>
+        <p>Vue.js 会将名为 <code>UserDisplay</code> 的组件转换为用短横线分隔的小写形式 <code>user-display</code>。</p>
+    </blockquote>
+    <h4><a name='header-n16' class='md-header-anchor '></a>传值</h4>
+    <p>在父组件中使用行内自定义 attribute传值</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!-- inside parent component --&gt;</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">template</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  //属性名=属性值</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">user-display</span> <span class="cm-attribute">name</span>=<span class="cm-string">'Cheryl'</span> <span class="cm-attribute">age</span>=<span class="cm-string">'28'</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">user-display</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">template</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-def">UserDisplay</span> <span class="cm-keyword">from</span> <span class="cm-string">'./UserDisplay.vue'</span>;</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">default</span> {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">components</span>: {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">UserDisplay</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 299px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 299px;"></div>
+    </div>
+    </div>
+    </pre>
+    <blockquote>
+        <p>注意：prop中的属性不能有大写字母，不要使用驼峰命名。建议使用<code>-</code>作为分隔符（这是html的命名规则，js的命名遵循小驼峰规则）</p>
+        <p>原因：行内自定义属性attribute不支持大写</p>
+    </blockquote>
+    <h4><a name='header-n22' class='md-header-anchor '></a>读取</h4>
+    <p>在组件内，可以使用读取数据的方式来读取属性。 完整的 <code>UserDisplay</code> 组件可能如下所示：</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="html"
+        style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">template</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>Name: {{ user.name }}<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>Age: {{ user.age }}<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">template</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">default</span> {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">name</span>: <span class="cm-string">'UserDisplay'</span>,</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">props</span>: {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">user</span>: {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">name</span>: <span class="cm-variable">String</span>,</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">age</span>: <span class="cm-variable">Number</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 345px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 345px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p>在实际开发中，组件的复用次数并不是一个一成不变的固定值，所以我们常常把组件传值和v-for等语法综合起来运用。</p>
+    <h4><a name='header-n26' class='md-header-anchor '></a>特点</h4>
+    <p><code>单向数据流</code>：与有状态数据不同，通过属性传递值是单向绑定。 如果对属性进行了更改，这些更新<strong>不会扩展到父级</strong>。</p>
+    <p>细节：<code>引用类型赋值本质是赋值地址</code>，一但修改互相影响，非常不便于维护</p>
+    <h3><a name='header-n29' class='md-header-anchor '></a>组件的自定义事件</h3>
+    <hr />
+    <h4><a name='header-n31' class='md-header-anchor '></a>发射带有数据的事件</h4>
+    <p>组件可能需要通过事件向父组件返回数据。 可以通过向 <code>$emit</code> 传递其他参数来返回任何数据。 如果希望通过返回 <code>true</code> 来指示更新成功，可以像下面这样更新调用：</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">@click</span>=<span class="cm-string">"$emit('userUpdated', true)"</span><span class="cm-tag cm-bracket">&gt;</span>Save user<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+    </div>
+    </div>
+    </pre>
+    <blockquote>
+        <p>注意：@click=&quot;doclick&quot; 在这个表达式中click是事件名，doclick是方法名</p>
+    </blockquote>
+    <p>说到方法，我们当然也可以用方法来解决这个问题</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="javascript"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">methods</span>: {</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">saveUser</span>() {</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">// perform other operations</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">this</span>.<span class="cm-property">$emit</span>(<span class="cm-string">'userUpdated'</span>, <span class="cm-atom">true</span>); <span class="cm-comment">// emits event</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 138px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 138px;"></div>
+    </div>
+    </div>
+    </pre>
+    <h4><a name='header-n38' class='md-header-anchor '></a>添加自定义事件</h4>
+    <p>完成数据的返回后，在父组件中就可以调用这些数据了，我们需要通过给父组件添加自定义事件来调用数据：</p>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">booking-form</span> <span class="cm-attribute">@booking-created</span>=<span class="cm-string">"addBooking"</span> <span class="cm-attribute">:cabins</span>=<span class="cm-string">"cruise.cabins"</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">booking-form</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p>我们将 <code>addBooking</code> 函数连接到 <code>booking-created</code>
+        事件，addbooking和其他的方法一样，可以在methods里面定义使用，注意<strong>父组件中的事件名要与子组件$emit中的事件名一致</strong></p>
+    <blockquote>
+        <p>特别声明：虽然我们从子组件中获得了数据，但是我们必须清醒的意识到，<strong>数据并不是在子组件中完成修改的</strong>，子组件只负责传递信息，包括但不限于id等，修改的操作最终是在父组件中完成的</p>
+    </blockquote>
+    <p>组件本质相当于一个自定义标签，也支持<code>v-for</code>列表渲染。</p>
+    <p>组件语法要求很严格： <code>v-for</code>必须要添加key值， 而且index如果没有使用则不能写，否则会报错（用不上index，就强制不写。需要使用index的时候再写）</p>
+    <p><code>父组件</code>通过<code>props</code>来传值的时候，如果在行内想要访问data中的数据，需要使用<code>v-bind</code>指令</p>
+    <h3><a name='header-n47' class='md-header-anchor '></a>图解</h3>
+    <p><img src='./uploads/Snipaste_2022-08-14_09-26-04.png' alt='Snipaste_2022-08-14_09-26-04'
+            referrerPolicy='no-referrer' /></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+@import url(./base.less);
+
+// 动画
+@keyframes move-t {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+// 版心
+.w {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+// 主要内容
+.main {
+
+    // 每一大块的padding
+    >div {
+        padding: 0 100px;
+    }
+
+    // pic
+    .aside {
+
+        // 图片总属性
+        .pic-top {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin: 20px auto;
+            animation: move-t 1s ease-in-out;
+        }
+
+        // 图片在这里换
+        .top01 {
+            background: url(../img/01.jpg) no-repeat center top;
+            background-size: cover;
+        }
+    }
+
+    // 内容
+    .section {
+        margin-top: 40px;
+        animation: move-t 1s ease-in-out;
+        margin-bottom: 100px;
+
+        // 标题
+        h2 {
+            font-weight: 400;
+            animation: move-t 0.8s ease-in-out;
+            text-align: center;
+            padding-top: 30px
+        }
+
+        p {
+            margin-top: 20px;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        pre {
+            padding-top: 20px;
+        }
+
+        // 过渡效果
+        transition: all 0.8s;
+
+        &:hover {
+            box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157),
+                0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28),
+                0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+// 返回
+.footer {
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    a {
+        i {
+            font-size: 20px;
+            color: #1e1e1e;
+        }
+        span {
+            color: #1e1e1e;
+            font-size: 10px;
+
+        }
+        &:hover span,
+        &:hover i {
+            color: #ccc;
+        }
+    }
+}

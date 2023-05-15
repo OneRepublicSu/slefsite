@@ -1,0 +1,583 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/markdown.css">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+</head>
+
+<body class='typora-export os-windows'>
+    <div id='write' class='is-node'>
+        <h2><a name='header-n882' class='md-header-anchor '></a>知识脉络</h2>
+        <p><img src='./uploads/vue-cli.png' alt='vue-cli' referrerPolicy='no-referrer' /></p>
+        <p>&nbsp;</p>
+        <h3><a name='header-n1026' class='md-header-anchor '></a>Vue CLI 和自定义组件简介</h3>
+        <hr />
+        <p>为了支持将应用程序分解为较小的单元，Vue 使你能够创建组件。
+            组件是可重用的构建基块，你可以基于组件创建应用程序，通俗的说，它就是一个<strong>vue自定义标签</strong>，当然你也可以把它看作一个<strong>vue实例</strong>。</p>
+        <p>可以将组件创建为 JavaScript 文件，或通过扩展名为 <strong>.vue 的单文件</strong>组件来创建组件。 单文件组件使用浏览器无法读取的专用语法。 必须将此语法转换为相应的
+            JavaScript、HTML 和 CSS 语法。 将专用语法转换为浏览器可读取的内容的过程称作“捆绑”，这需要额外的工具，例如 webpack。</p>
+        <p>幸运的是，Vue 还提供了可用于启动应用程序的命令行接口 (CLI)。 CLI 配置所有必备工具，包括捆绑程序和开发服务器。</p>
+        <p>俗称<strong>脚手架</strong>。 </p>
+        <p>从结构的角度来说，脚手架是一种<strong>规范的项目目录结构</strong>。</p>
+        <h3><a name='header-n890' class='md-header-anchor '></a>Vue-Cli入门</h3>
+        <hr />
+        <p>Vue CLI 提供了一套开发工具，包括用于项目基架构建和快速原型设计的工具和一个开发服务器。 它帮助你快速创建初始应用程序，以便你可以专注于编码，而不是配置库和其他设置。</p>
+        <h4><a name='header-n893' class='md-header-anchor '></a>启动</h4>
+        <p>Vue CLI 的核心用法是启动应用程序。 Create 脚本供一个向导，你可以在其中选择一些最常见的配置:</p>
+        <p><strong>Lint 分析选项</strong>：确保所有代码看上去一致。 这些选项还可帮助发现错误，不过有些过于严苛，推荐关闭不影响开发，修改之后需要重新编译</p>
+        <p><img src='./uploads/lint.png' alt='1660202667845' referrerPolicy='no-referrer' /></p>
+        <h4><a name='header-n897' class='md-header-anchor '></a>生成过程</h4>
+        <p>Vue CLI 的设计使其能处理单文件 Vue 组件或 .vue 文件。 模块捆绑程序或捆绑程序管理将 .vue 文件中的专用语法转换为相应 JavaScript、HTML 和 CSS
+            语法的过程，使浏览器可读取这些文件。</p>
+        <p>vue-cli的底层是<code>webpack</code>以及<code>node.js</code>,在大多数情况中，webpack 的默认配置都适用。 </p>
+        <h4><a name='header-n900' class='md-header-anchor '></a>开发服务器</h4>
+        <p>开发任何类型的应用程序都需要反复试验。 你需要做一些更改，在浏览器中加载页面，测试该页面，然后再进行更改。 然后重复此过程，直到一切都按照预期工作。</p>
+        <p>你希望尽量减少此过程涉及的步骤。 为了简化开发，Vue CLI 包含了一个开发服务器。 该开发服务器会在你每次保存文件时检测文件更改，重新生成（或重新捆绑）项目，并使你能在浏览器中测试页面。</p>
+        <h3><a name='header-n903' class='md-header-anchor '></a>使用 Vue CLI 创建应用程序</h3>
+        <hr />
+        <h4><a name='header-n905' class='md-header-anchor '></a>安装</h4>
+        <blockquote>
+            <p>Vue CLI 往往是通过 npm 全局安装的</p>
+        </blockquote>
+        <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+            lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">npm</span> install <span class="cm-attribute">-g</span> @vue/cli</span></pre>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+    </div>
+    </div>
+    </pre>
+    <h4><a name='header-n909' class='md-header-anchor '></a>启动应用程序</h4>
+    <ol start=''>
+        <li>
+            <p>在命令窗口或终端窗口中，转到要用于存储应用程序的文件夹。</p>
+        </li>
+        <li>
+            <p>通过运行以下命令创建一个 Vue 应用程序</p>
+            <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+                lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
+                        style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;">vue create 工程名称</span></pre>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;">
+            </div>
+            <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p>工程名称不支持中文大写支持数字以及横杠</p>
+            <p>special tip：理论上只有cmd终端才有创建vue-cli的权限</p>
+        </li>
+        <li>
+            <p>vue为我们提供了三种创建模式:<code>vue2.0</code>,<code>vue3.0</code>以及<code>完全手动模式</code></p>
+            <blockquote>
+                <p>我们会发现 @vue 作为依赖项列出，@vue/cli-service 作为 devDependency 列出,这 是因为@vue/cli-service部分负责生成应用程序和运行开发服务器</p>
+            </blockquote>
+        </li>
+        <li>
+            <p>请注意两个脚本:</p>
+            <ul>
+                <li>
+                    <p><code>serve</code> 脚本用于启动开发服务器。</p>
+                </li>
+                <li>
+                    <p><code>build</code> 脚本用于在你准备好发布项目时，创建 JavaScript、HTML 或 CSS。</p>
+                    <blockquote>
+                        <p>readme帮助文档里有关于这两条脚本的说明</p>
+                    </blockquote>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p>打开将托管 Vue 应用程序的 public/index.html。 </p>
+        </li>
+        <li>
+            <p>打开 src/main.js</p>
+        </li>
+        <li>
+            <p>请注意 src/components 文件夹，所有组件都将存储在其中。</p>
+            <blockquote>
+                <p>component就是我们常说的组件,里面包含js,html和css,component的命名不支持中文,不支持大写英文字母</p>
+                <p>报错关键字为:invalid- 不合法</p>
+            </blockquote>
+        </li>
+        <li>
+            <p>打开 src/App.vue，它包含一些工程必不可少的核心组件。</p>
+        </li>
+        <li>
+            <p>目录介绍（了解）</p>
+        </li>
+    </ol>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"
+        style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> vuecil-demo &nbsp; &nbsp; &nbsp; &nbsp; <span class="cm-comment"># 项目目录</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── node_modules <span class="cm-comment"># 项目依赖的第三方包（基本被忽略的项）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── public &nbsp; &nbsp; &nbsp; <span class="cm-comment"># 静态文件目录</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ├── favicon.ico<span class="cm-comment"># 浏览器小图标</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  └── index.html <span class="cm-comment"># 单页面的html文件(网站首页，vue会帮我们配置好，使用较少)</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── src &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment"># 业务文件夹(项目核心文件夹，我们写的项目代码都放在这个文件夹里面)</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ├── assets &nbsp; &nbsp; <span class="cm-comment"># 静态资源（一般项目图片、css都放在这里）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  └── logo.png <span class="cm-comment"># vue的logo图片(没啥用,vue打广告的，可删除)</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ├── components <span class="cm-comment"># 组件目录一般我们写的组件都放在这里）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  └── HelloWorld.vue <span class="cm-comment"># 欢迎页面vue代码文件 （打广告的，可删除）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ├── App.vue &nbsp; &nbsp;<span class="cm-comment"># 整个应用的根组件（网站首页index.htm默认会渲染这个根组件）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  └── main.js &nbsp; &nbsp;<span class="cm-comment"># 入口js文件（入口文件，vue实例的创建，根组件的挂载都是在这里完成）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── .gitignore &nbsp; <span class="cm-comment"># git提交忽略配置（默认已经帮我们配置好 ）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── babel.config.js &nbsp;<span class="cm-comment"># babel配置（ES6转换ES5工具，一般不用管）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── package.json <span class="cm-comment"># 依赖包列表</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── README.md &nbsp; &nbsp;<span class="cm-comment"># 项目说明（一般公司代码规范，人员组成之类的可以写在这里）</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>└── package-lock.json &nbsp; &nbsp;<span class="cm-comment"># 项目包版本锁定和缓存地址</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>└── vue.config.js &nbsp; &nbsp;<span class="cm-comment"># 项目webpack配置项</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 414px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 414px;"></div>
+    </div>
+    </div>
+    </pre>
+    <h4><a name='header-n945' class='md-header-anchor '></a>运行开发服务器</h4>
+    <ol start=''>
+        <li>
+            <p>首先,所有的npm/yarn命令都应该在vue项目中的根目录的终端中运行</p>
+        </li>
+        <li>
+            <p>运行以下命令来启动开发服务器：</p>
+            <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+                lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
+                        style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">npm</span> run serve</span></pre>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;">
+            </div>
+            <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
+            </div>
+            </div>
+            </pre>
+        </li>
+        <li>
+            <p>打开浏览器，然后转到 <code>https://localhost:8080</code>或者是你本人的ip+8080,看到vue的广告界面就启动成功了</p>
+        </li>
+        <li>
+            <p>一些文件说明</p>
+            <p>main.js的内容包括</p>
+            <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+                lang="javascript"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
+                        style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//1.导入vue框架</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-def">Vue</span> <span class="cm-keyword">from</span> <span class="cm-string">'vue'</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//2.导入App.vue根组件</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-def">App</span> <span class="cm-keyword">from</span> <span class="cm-string">'./App.vue'</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//3.控制台打印提示开关-只影响开发</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Vue</span>.<span class="cm-property">config</span>.<span class="cm-property">productionTip</span> <span class="cm-operator">=</span> <span class="cm-atom">false</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//4.创建vue实例-把vue组件挂在到id为app的元素上</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">new</span> <span class="cm-variable">Vue</span>({</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-comment">//默认渲染App.vue组件(根组件)</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">render</span>: <span class="cm-def">h</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">h</span>(<span class="cm-variable">App</span>),</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}).<span class="cm-property">$mount</span>(<span class="cm-string">'#app'</span>)<span class="cm-comment">//设置挂载点,相当于 el:'#app'</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 253px;">
+            </div>
+            <div class="CodeMirror-gutters" style="display: none; height: 253px;"></div>
+            </div>
+            </div>
+            </pre>
+        </li>
+    </ol>
+    <h3><a name='header-n958' class='md-header-anchor '></a>vue组件</h3>
+    <hr />
+    <p>根据定义，组件是“一个较大整体中的一个部分或元素”。考虑创建应用程序时，你通常是使用较小的部分，然后将它们组合成一个较大的整体：应用程序。 Vue
+        使你能创建可用于创建完整应用程序的组件。它的优势在于增强了代码的复用性和可维护性。</p>
+    <p>常见的方法是使用 .vue 文件中的 Vue 语法创建单文件组件。 单文件组件拥有更清晰的结构以及更独立的设置。创建组件时，你实际上是创建可在应用程序中使用的新标记，方式类似于创建普通 HTML 标记。
+        这种形式的语义标记指明了页面上显示的内容。并且创建的标签是双标签。</p>
+    <h4><a name='header-n962' class='md-header-anchor '></a>vue的组件结构</h4>
+    <ol start=''>
+        <li>
+            <p><strong>style样式</strong></p>
+            <blockquote>
+                <p>此部分可以包含任何有效的 CSS 或你可能使用的任何预处理器的语法</p>
+            </blockquote>
+            <p>你还可以使用 <code>scoped</code> 特性将 CSS 的范围设定为该特定组件。 样式只会仅应用于该组件，因此你可以创建类和其他设置，而无需担心会意外修改页面的其他部分。</p>
+            <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+                lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
+                        style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span> &nbsp;<span class="cm-attribute">scoped</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.demo</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">font-family</span>: <span class="cm-variable">Verdana</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                <div class="" style="position: relative;">
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;">
+            </div>
+            <div class="CodeMirror-gutters" style="display: none; height: 115px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><code>scoped</code>：它的全称叫组件的css作用域，默认情况下，如果子组件和父组件有相同的选择器样式，优先加载父组件css样式，如果希望子组件可以加载自己的样式，就可以使用scoped组件css作用域，从规范上来讲，每一个子组件最好都有这个属性
+            </p>
+            <p><strong>作用：</strong>给组件的css添加作用域</p>
+            <p><strong>原理：</strong>给组件添加一个自定义属性，本质是通过css的属性选择器来增加权重</p>
+            <p><code>name</code>：name属性可以让vue-tool识别并显示，最好与组件名保持一致，便于管理</p>
+        </li>
+        <li>
+            <p><strong>script脚本</strong></p>
+            <blockquote>
+                <p><code>script</code> 部分存储用于组件的脚本。 和 Vue JavaScript 组件一样，你可以导出各种 Vue 属性和方法，例如
+                    <code>data()</code>、<code>methods</code> 和 <code>components</code>。
+                </p>
+            </blockquote>
+            <p>export default对象就是vue实例对象（类似于）一个文件就是一个vue实例</p>
+            <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="html"
+                style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
+                        style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">default</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">data</span>() {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">product</span>: {</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">name</span>: <span class="cm-string">'Cruise to the moon'</span>,</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">description</span>: <span class="cm-string">'A cool cruise to the moon!'</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  },</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">methods</span>:{</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">doClick</span>(){</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-keyword">this</span>)</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 391px;">
+            </div>
+            <div class="CodeMirror-gutters" style="display: none; height: 391px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p><strong>Q：vue的data为什么是一个函数呢？</strong></p>
+            <p><strong>A：</strong>因为在多个地方复用，如果这个data不是一个函数的话，那么多个地方就会复用同一份内存，互相影响，而data是一个函数的话，vue的组件在每一次复用的时候都会调用这个函数，得到一个全新的对象，就可以保证组件之间的数据互不影响
+            </p>
+        </li>
+        <li>
+            <p><strong>template模板</strong></p>
+            <blockquote>
+                <p><code>template</code> 部分包含要用于显示信息并使用户能与数据交互的 HTML 模板。 使用基于 JavaScript 的组件时，<code>template</code> 通常位于
+                    .html 文件中，或者它是 JavaScript 文件中的字符串字面量。</p>
+            </blockquote>
+            <blockquote>
+                <p><code>template</code> 中使用的 HTML 语法与基于 JavaScript 的组件中的语法相同，这包括使用 handlebars (<code>{{}}</code>)
+                    来显示数据。</p>
+            </blockquote>
+            <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+                lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
+            </div>
+            <div class="CodeMirror-measure"></div>
+            <div style="position: relative; z-index: 1;"></div>
+            <div class="CodeMirror-code" role="presentation" style="">
+                <div class="CodeMirror-activeline" style="position: relative;">
+                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
+                        style="left: 0px; width: 0px;"></div>
+                    <pre class=" CodeMirror-line "
+                        role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">template</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                </div>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"product"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>{{ product.name }}<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>{{ product.description }}<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+                <pre class=" CodeMirror-line "
+                    role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">template</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 138px;">
+            </div>
+            <div class="CodeMirror-gutters" style="display: none; height: 138px;"></div>
+            </div>
+            </div>
+            </pre>
+            <p>模板需要有一个根元素。 也就是说，将 <code>product</code> 作为 <code>id</code> 的 <code>div</code> 元素不能拥有任何同级元素。 它只能拥有子元素。</p>
+        </li>
+    </ol>
+    <h4><a name='header-n988' class='md-header-anchor '></a>加载和组件</h4>
+    <p>如前文所述，保存单文件组件所用的扩展名是 .vue。 你可以使用 <code>import</code> 语句以类似的方式将这些组件加载到其他模块。 可以使用 <code>components</code> 属性注册它们。
+        组件注册后，可用作 <code>template</code> 内的标记。</p>
+    <p>我们把.vue单文件建在component文件夹下。</p>
+    <p>局部组件：</p>
+    <blockquote>
+        <p>在哪里使用，就要在哪里导入，用一次导一次</p>
+    </blockquote>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="html"
+        style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">template</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">product-display</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">product-display</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">template</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//组件名和文件名一样便于管理</span></span></pre>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-def">ProductDisplay</span> <span class="cm-keyword">from</span> <span class="cm-string">'./ProductDisplay.vue'</span></span></pre>
+        </div>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">default</span> {</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">//注册组件</span></span></pre>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-property">components</span>: {</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">// ProductDisplay: ProductDisplay</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">ProductDisplay</span></span></pre>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 322px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 322px;"></div>
+    </div>
+    </div>
+    </pre>
+    <p>在前面的代码中，导入了 <code>ProductDisplay</code> 组件，并已将它添加到 <code>components</code> 属性。 于是，在模板中使用
+        <code>ProductDisplay</code> 时，Vue 的编译器可以判断需要分析的是此组件，而不是常规的 HTML 元素。
+    </p>
+    <p>全局组件：</p>
+    <blockquote>
+        <p>一次注册全项目受用，任何vue的单文件都可以使用，他被注册在vue的原型中</p>
+    </blockquote>
+    <pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded"
+        lang="javascript"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre>
+    </div>
+    <div class="CodeMirror-measure"></div>
+    <div style="position: relative; z-index: 1;"></div>
+    <div class="CodeMirror-code" role="presentation" style="">
+        <div class="CodeMirror-activeline" style="position: relative;">
+            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-def">Vue</span> <span class="cm-keyword">from</span> <span class="cm-string">'vue'</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-def">App</span> <span class="cm-keyword">from</span> <span class="cm-string">'./App.vue'</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Vue</span>.<span class="cm-property">config</span>.<span class="cm-property">productionTip</span> <span class="cm-operator">=</span> <span class="cm-atom">false</span></span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//导入组件</span></span></pre>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-def">mybutton</span> <span class="cm-keyword">from</span> <span class="cm-string">'./components/mybutton.vue'</span></span></pre>
+        </div>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//全局注册</span></span></pre>
+        </div>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Vue</span>.<span class="cm-property">component</span>(<span class="cm-string">'mybutton'</span>,<span class="cm-variable">mybutton</span>)</span></pre>
+        </div>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//姓名保持一致便于管理，但这不是必须行为</span></span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+        <div class="" style="position: relative;">
+            <pre class=" CodeMirror-line "
+                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">new</span> <span class="cm-variable">Vue</span>({</span></pre>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">render</span>: <span class="cm-def">h</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">h</span>(<span class="cm-variable">App</span>),</span></pre>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">}).<span class="cm-property">$mount</span>(<span class="cm-string">'#app'</span>)</span></pre>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 299px;"></div>
+    <div class="CodeMirror-gutters" style="display: none; height: 299px;"></div>
+    </div>
+    </div>
+    </pre>
+    <h3><a name='header-n1000' class='md-header-anchor '></a>辅助调试工具</h3>
+    <hr />
+    <p>JavaScript有一个自带的手动断点关键字<code>debugger</code>加了之后只要运行到此位置就会进入断点调试</p>
+    <p>&nbsp;</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+// out:false
+@charset 'UTF-8';
+
+* {
+  // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body, ul, p, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.clearfix::after {
+  content: '';
+  /* 因为伪元素插入的标签属于行内元素,需要转换为块级 */
+  display: block;
+  clear: both;
+  /* 兼容性的作用 */
+  height: 0;
+  visibility: hidden;
+}
+
+/* 兼容ie6 ie7 */
+/*ie浏览器 */
+.clearfix {
+  *zoom: 1;
+}

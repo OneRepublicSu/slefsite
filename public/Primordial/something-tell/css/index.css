@@ -1,0 +1,246 @@
+@charset 'UTF-8';
+body,
+ul,
+p,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@keyframes move-t {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move-m {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+body {
+  background: #ccc;
+}
+.main-top {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 250px;
+  background-color: #ccc;
+  text-align: center;
+}
+.main-top h3 {
+  font-size: 130px;
+  font-style: italic;
+}
+.main-top .line1 {
+  margin-top: 20px;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .contentadd {
+  animation: move-m 1s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 300px;
+  background-color: #eee;
+  padding: 10px;
+}
+.main .contentadd form {
+  display: flex;
+}
+.main .contentadd form .btna {
+  background-color: transparent;
+}
+.main .contentadd form .ftop {
+  width: 250px;
+}
+.main .contentadd form .ftop .picavatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin: 10px auto;
+}
+.main .contentadd form .ftop .btn-primary {
+  display: block;
+  width: 250px;
+  height: 20px;
+  outline: none;
+  border: none;
+  margin: 10px auto;
+  font-size: 10px;
+}
+.main .contentadd form .ftop .btn-primary .iconm {
+  margin-right: 10px;
+}
+.main .contentadd form .ftop .nameadd {
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 10px;
+}
+.main .contentadd form .ftop .form-control {
+  display: block;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px #1e1e1e;
+  margin: 10px auto;
+  background-color: transparent;
+}
+.main .contentadd form .ftop .form-control::placeholder {
+  text-align: center;
+}
+.main .contentadd form .ftop .form-control:focus {
+  background-color: transparent;
+}
+.main .contentadd form .fbottom {
+  /*定义滚动条轨道 内阴影+圆角*/
+  /*定义滑块 内阴影+圆角*/
+}
+.main .contentadd form .fbottom .fbc {
+  font-size: 10px;
+  margin: 10px 0;
+}
+.main .contentadd form .fbottom .fcbtn {
+  display: flex;
+  justify-content: end;
+}
+.main .contentadd form .fbottom .btn-dark {
+  display: block;
+  height: 20px;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+  font-size: 10px;
+}
+.main .contentadd form .fbottom .btn-dark .iconu {
+  margin-right: 10px;
+  font-size: 12px;
+}
+.main .contentadd form .fbottom .conmmenta {
+  width: 520px;
+  height: 205px;
+  resize: none;
+  overflow: scroll;
+  border: none;
+  outline: none;
+}
+.main .contentadd form .fbottom ::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+  background-color: #eee;
+}
+.main .contentadd form .fbottom ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0px rgba(240, 240, 240, 0.5);
+  background-color: #eee;
+}
+.main .content-main > div {
+  margin-top: 100px;
+  margin-bottom: 250px;
+  position: relative;
+  width: 600px;
+  background-color: white;
+  transition: all 0.8s;
+  display: flex;
+  flex-direction: column;
+}
+.main .content-main > div .pic {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.main .content-main > div .info {
+  padding-top: 80px;
+  width: 600px;
+  height: 40px;
+  text-align: center;
+}
+.main .content-main > div .info h4 {
+  font-size: 20px;
+  font-style: italic;
+  margin: 5px 0;
+  color: #1e1e1e;
+}
+.main .content-main > div .content {
+  text-align: center;
+  padding: 30px;
+}
+.main .content-main > div .content .time {
+  margin: 20px 0;
+  font-size: 12px;
+}
+.main .content-main > div:hover {
+  box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157), 0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28), 0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+.footer {
+  height: 200px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  text-align: center;
+}
+.footer a {
+  display: block;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.footer a i {
+  font-size: 20px;
+  color: #1e1e1e;
+}
+.footer a span {
+  color: #1e1e1e;
+  font-size: 10px;
+}
+.footer a:hover span,
+.footer a:hover i {
+  color: #eee;
+}

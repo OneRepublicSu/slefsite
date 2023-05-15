@@ -1,0 +1,100 @@
+{
+  "id": "3490587",
+  "name": "onerepublicsu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "554446",
+      "name": "向左箭头",
+      "font_class": "iconset0412",
+      "unicode": "e723",
+      "unicode_decimal": 59171
+    },
+    {
+      "icon_id": "28901415",
+      "name": "标签市场",
+      "font_class": "biaoqianshichang",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "28901579",
+      "name": "明细画像",
+      "font_class": "mingxihuaxiang",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "335683",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "2674480",
+      "name": "对勾",
+      "font_class": "duigou",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "2076385",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e8c1",
+      "unicode_decimal": 59585
+    },
+    {
+      "icon_id": "5241258",
+      "name": "做任务",
+      "font_class": "zuorenwu",
+      "unicode": "e6ac",
+      "unicode_decimal": 59052
+    },
+    {
+      "icon_id": "16470609",
+      "name": "附件/回形针",
+      "font_class": "fujian",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    },
+    {
+      "icon_id": "18176431",
+      "name": "收起",
+      "font_class": "mid-full",
+      "unicode": "ea82",
+      "unicode_decimal": 60034
+    },
+    {
+      "icon_id": "844607",
+      "name": "勾5",
+      "font_class": "gou5",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "630094",
+      "name": "向右箭头",
+      "font_class": "xiangyoujiantou",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "630095",
+      "name": "向左箭头",
+      "font_class": "xiangzuojiantou",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "29973094",
+      "name": "页面导航",
+      "font_class": "a-zujiantianchong_huaban1fuben13",
+      "unicode": "e6dc",
+      "unicode_decimal": 59100
+    }
+  ]
+}

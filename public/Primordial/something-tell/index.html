@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>something tell</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../lib/toastr/toastr.min.css">
+</head>
+
+<body>
+    <!-- 页面装饰组 -->
+    <div class="main-top">
+        <h3>
+            PHONOGRAGH
+        </h3>
+        <P class="line1">
+            “做一阵风，有温柔也有英勇。”
+        </P>
+        <p>Be a gust of wind, gentle and brave</p>
+    </div>
+
+
+    <div class="main w">
+        <div class="content-main">
+            <!-- 顶部信息 -->
+            <div>
+                <!-- 头像 -->
+                <img src="./img/01.jpg" alt="" class="pic">
+                <!-- 信息 -->
+                <div class="info">
+                    <h4>
+                        OneRepublic
+                    </h4>
+                </div>
+                <!-- 评论 -->
+                <div class="content">
+                    <p>
+                        phonograph
+                        <br>
+                        <br>
+                        去做一阵风,温柔且自由
+                        <br>
+                        To be a gust of wind, gentle and free
+                        <br>
+                        <br>
+
+                    </p>
+                    <p style="font-size:10px ;">
+                        <i>评论须知</i>
+                        <br>
+                        <br>
+                        为减少流程(我是菜狗),此页面不支持登录
+                        <br>
+                        所以为了保存数据的准确和完整,也不支持修改和删除
+                        <br>
+                        如果您实在需要删除或者修改可以联系网站维护者本人
+                        <br>
+                        这边会定期查看数据,健康网络环境你我共建
+                    </p>
+                    <!-- 时间 -->
+                    <p class="time">
+                        1998年9月5日
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cma">
+            <!-- 添加评论的区域 -->
+        </div>
+
+
+        <!-- 添加评论的卡片 -->
+        <div class="contentadd" style="display: none;">
+            <form action="index.php" id="addForm">
+                <div class="ftop">
+                    <div>
+                    
+                        <img src="./img/01.jpg" class="picavatar">
+                     
+                        <!-- image/* 表示只允许选择图片类型的文件 -->
+                        <input type="file" id="iptFile" accept="image/*" style="display: none;">
+                        <!-- 选择头像图片的按钮 -->
+                        <button class="btn btna btn-primary" id="btnChoose" type="button"><i
+                                class="iconfont icon-mingxihuaxiang iconm"></i>点击上传头像</button>
+                    </div>
+
+                    <!-- 姓名 -->
+                    <div class="name">
+                        <div class="nameadd">
+                            <span>姓名</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Your name" name="nicname"
+                            autocomplete="off">
+                        <!--需要上交的隐藏信息 -->
+                        <input type="text" class="form-control" placeholder="Your name" name="picurl" autocomplete="off"
+                            style="display:none" id="picurl">
+                        <input type="text" class="form-control" placeholder="Your name" name="time" autocomplete="off"
+                            style="display:none" id="time">
+                    </div>
+                </div>
+
+
+                <div class="fbottom">
+                    <!-- 评论 -->
+                    <div>
+                        <div class="fbc">
+                            <span>留言内容:</span>
+                        </div>
+                        <textarea name="contents" id="" cols="30" rows="10" class="conmmenta"></textarea>
+                    </div>
+                    <div class="fcbtn">
+                        <!-- 添加和取消按钮 -->
+                        <button class="btn-dark btna btn-close" type="button"> <i class="iconfont icon-mid-full iconu"></i>取消</button>
+                        <button class="btn btna btn-dark" type="submit"> <i class="iconfont icon-zuorenwu iconu"></i>点击提交评论</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- 底部返回以及添加留言 -->
+    <div class="footer">
+        <a href="#" id="nav">
+            <div>
+                <i class="iconfont icon-pinglun"></i>
+                <br>
+                <span>Click To Get Navigation</span>
+                <br>
+                <span>添加评论</span>
+            </div>
+        </a>
+        <a href="../index.html">
+            <i class="iconfont icon-a-zujiantianchong_huaban1fuben13"></i>
+            <br>
+            <span>Click Here To Back</span>
+            <br>
+            <span>点击此处返回</span>
+        </a>
+
+
+    </div>
+
+
+
+
+
+    <script src="../lib/jquery-v3.6.0.js"></script>
+    <script src="../lib/axios.js"></script>
+    <script src="../lib/jquery.serializejson.min.js"></script>
+
+    <script src="../lib/toastr/toastr.min.js"></script>
+    <script src="../utils/toastr.js"></script>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/comment.js"></script>
+
+</body>
+
+</html>
